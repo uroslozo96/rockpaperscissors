@@ -1,0 +1,70 @@
+@import "mixins";
+@import "vars";
+
+@include main;
+@include section;
+
+.score {
+  color: $fontColor;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 0.5s ease 0.5s;
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+  }
+}
+
+.intro {
+  color: $bcgColor;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+  h1 {
+    color: $fontColor;
+    font-size: 50px;
+  }
+  @include buttonStyle;
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+  .winner {
+    color: $fontColor;
+    text-align: center;
+    font-size: 50px;
+  }
+  .hands,
+  .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .player-hand {
+    transform: rotateY(180deg);
+  }
+  @include buttonStyle;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
