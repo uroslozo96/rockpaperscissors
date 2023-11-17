@@ -1,5 +1,6 @@
 # rockpaperscissors
 Rock-Paper-Scissors Game
+![Design preview](./game.png)
 
 This Rock-Paper-Scissors game is developed using HTML, CSS, Sass, and JavaScript. 
 Players select either rock, paper, or scissors, while the computer randomly chooses its selection. 
